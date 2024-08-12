@@ -1,0 +1,31 @@
+uuid: 32498f00-b419-48ed-9a45-7318ea3e9197
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.repository.field_description
+    - field.field.node.repository.field_hash
+    - field.field.node.repository.field_machine_name
+    - field.field.node.repository.field_number_of_issues
+    - field.field.node.repository.field_source
+    - field.field.node.repository.field_url
+    - node.type.repository
+id: node.repository.default
+targetEntityType: node
+bundle: repository
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_description: true
+  field_hash: true
+  field_machine_name: true
+  field_number_of_issues: true
+  field_source: true
+  field_url: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  title: true
+  uid: true
