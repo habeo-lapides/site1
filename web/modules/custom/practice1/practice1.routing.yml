@@ -1,0 +1,7 @@
+practice1.blog:
+  path: /blog
+  defaults:
+    _controller: Drupal\practice1\Controller\BlogPageController
+    _title: Blog
+  requirements:
+    _permission: access content
