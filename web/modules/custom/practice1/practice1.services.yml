@@ -1,4 +1,4 @@
 services:
-  Drupal\atdc\Repository\PostNodeRepository:
+  Drupal\practice1\Repository\PostNodeRepository:
     arguments:
       - '@entity_type.manager'

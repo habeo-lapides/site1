@@ -20,7 +20,6 @@ class BlogPageController extends ControllerBase {
    */
   public function __invoke(): array {
     $nodes = $this->postNodeRepository->findAll();
-
     $build = [];
     $build['content']['#theme'] = 'item_list';
     foreach ($nodes as $node) {

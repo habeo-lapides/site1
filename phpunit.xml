@@ -23,7 +23,7 @@
     <ini name="error_reporting" value="32767"/>
     <!-- Do not limit the amount of memory tests take to run. -->
     <ini name="memory_limit" value="-1"/>
-    <env name="SIMPLETEST_BASE_URL" value="http://site1.ddev.site:8080"/>
+    <env name="SIMPLETEST_BASE_URL" value="https://site1.ddev.site/"/>
     <env name="SIMPLETEST_DB" value="mysql://db:db@db/db"/>
     <!-- By default, browser tests will output links that use the base URL set
      in SIMPLETEST_BASE_URL. However, if your SIMPLETEST_BASE_URL is an internal
@@ -31,7 +31,7 @@
      you can set the base URL used in the browser test output links to something
      reachable from your host machine here. This will allow you to follow them
      directly and view the output. -->
-    <env name="BROWSERTEST_OUTPUT_BASE_URL" value="web/sites/default/simpletest"/>
+    <env name="BROWSERTEST_OUTPUT_BASE_URL" value="web/sites/default/simpletest/"/>
     <!-- The environment variable SYMFONY_DEPRECATIONS_HELPER is used to configure
       the behavior of the deprecation tests.
       Drupal core's testing framework is setting this variable to its defaults.
@@ -63,7 +63,7 @@
         overridden by the value set for the "BROWSERTEST_OUTPUT_DIRECTORY"
         environment variable.
       -->
-      <parameter name="outputDirectory" value="sites/simpletest/browser_output"/>
+      <parameter name="outputDirectory" value="web/sites/simpletest/browser_output"/>
       <!-- By default browser tests print the individual links in the test run
         report. To avoid overcrowding the output in CI environments, you can
         set the "verbose" parameter or the "BROWSERTEST_OUTPUT_VERBOSE"

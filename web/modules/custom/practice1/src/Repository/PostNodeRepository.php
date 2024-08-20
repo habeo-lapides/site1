@@ -31,7 +31,7 @@ final class PostNodeRepository {
     $nodeStorage = $this->entityTypeManager->getStorage('node');
     $nodes = $nodeStorage->loadMultiple();
 
-    return $nodes
+    return $nodes;
   }
 
 }
