@@ -34,6 +34,7 @@ class BlogPageTest extends BrowserTestBase {
    * Test if
    * @var unset $nodes
    *
+   * @phpstan-ignore varTag.misplaced
    */
   public function testPostsAreVisible(): void {
 
