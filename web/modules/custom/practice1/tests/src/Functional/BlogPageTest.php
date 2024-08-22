@@ -3,10 +3,8 @@
 namespace Drupal\Tests\practice1\Functional;
 
 use Drupal\Core\Datetime\DrupalDateTime;
-use Drupal\node\NodeInterface;
 use Drupal\Tests\BrowserTestBase;
 use Symfony\Component\HttpFoundation\Response;
-
 
 /**
  * Blog Page Test.
@@ -31,7 +29,8 @@ class BlogPageTest extends BrowserTestBase {
   }
 
   /**
-   * Test if
+   * Test if.
+   *
    * @var unset $nodes
    *
    * @phpstan-ignore varTag.misplaced

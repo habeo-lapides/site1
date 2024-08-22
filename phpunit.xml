@@ -23,15 +23,15 @@
     <ini name="error_reporting" value="32767"/>
     <!-- Do not limit the amount of memory tests take to run. -->
     <ini name="memory_limit" value="-1"/>
-    <env name="SIMPLETEST_BASE_URL" value="https://site1.ddev.site/"/>
-    <env name="SIMPLETEST_DB" value="mysql://db:db@db/db"/>
+    <env name="SIMPLETEST_BASE_URL" value="http://localhost"/>
+    <env name="SIMPLETEST_DB" value="sqlite://localhost//dev/shm/test.sqlite"/>
     <!-- By default, browser tests will output links that use the base URL set
      in SIMPLETEST_BASE_URL. However, if your SIMPLETEST_BASE_URL is an internal
      path (such as may be the case in a virtual or Docker-based environment),
      you can set the base URL used in the browser test output links to something
      reachable from your host machine here. This will allow you to follow them
      directly and view the output. -->
-    <env name="BROWSERTEST_OUTPUT_BASE_URL" value="web/sites/default/simpletest/"/>
+    <!-- <env name="BROWSERTEST_OUTPUT_BASE_URL" value="https://site1.ddev.site"/> -->
     <!-- The environment variable SYMFONY_DEPRECATIONS_HELPER is used to configure
       the behavior of the deprecation tests.
       Drupal core's testing framework is setting this variable to its defaults.
@@ -75,46 +75,46 @@
   </extensions>
   <testsuites>
     <testsuite name="unit">
-      <directory>tests/Drupal/Tests</directory>
-      <directory>modules/**/tests/src/Unit</directory>
-      <directory>profiles/**/tests/src/Unit</directory>
-      <directory>themes/**/tests/src/Unit</directory>
-      <directory>../modules/**/tests/src/Unit</directory>
-      <directory>../profiles/**/tests/src/Unit</directory>
-      <directory>../themes/**/tests/src/Unit</directory>
+      <directory>.web/core/tests/Drupal/Tests</directory>
+      <directory>.web/core/modules/**/tests/src/Unit</directory>
+      <directory>.web/core/profiles/**/tests/src/Unit</directory>
+      <directory>.web/core/themes/**/tests/src/Unit</directory>
+      <directory>.web/core/modules/**/tests/src/Unit</directory>
+      <directory>.web/core/profiles/**/tests/src/Unit</directory>
+      <directory>.web/core/themes/**/tests/src/Unit</directory>
     </testsuite>
     <testsuite name="kernel">
-      <directory>tests/Drupal/KernelTests</directory>
-      <directory>modules/**/tests/src/Kernel</directory>
-      <directory>recipes/*/tests/src/Kernel</directory>
-      <directory>profiles/**/tests/src/Kernel</directory>
-      <directory>themes/**/tests/src/Kernel</directory>
-      <directory>../modules/**/tests/src/Kernel</directory>
-      <directory>../profiles/**/tests/src/Kernel</directory>
-      <directory>../themes/**/tests/src/Kernel</directory>
+      <directory>.web/core/tests/Drupal/KernelTests</directory>
+      <directory>.web/core/modules/**/tests/src/Kernel</directory>
+      <directory>.web/core/recipes/*/tests/src/Kernel</directory>
+      <directory>.web/core/profiles/**/tests/src/Kernel</directory>
+      <directory>.web/core/themes/**/tests/src/Kernel</directory>
+      <directory>.web/core/modules/**/tests/src/Kernel</directory>
+      <directory>.web/core/profiles/**/tests/src/Kernel</directory>
+      <directory>.web/core/themes/**/tests/src/Kernel</directory>
     </testsuite>
     <testsuite name="functional">
-      <directory>tests/Drupal/FunctionalTests</directory>
-      <directory>modules/**/tests/src/Functional</directory>
-      <directory>profiles/**/tests/src/Functional</directory>
-      <directory>recipes/*/tests/src/Functional</directory>
-      <directory>themes/**/tests/src/Functional</directory>
-      <directory>../modules/**/tests/src/Functional</directory>
-      <directory>../profiles/**/tests/src/Functional</directory>
-      <directory>../themes/**/tests/src/Functional</directory>
+      <directory>.web/core/tests/Drupal/FunctionalTests</directory>
+      <directory>.web/core/modules/**/tests/src/Functional</directory>
+      <directory>.web/core/profiles/**/tests/src/Functional</directory>
+      <directory>.web/core/recipes/*/tests/src/Functional</directory>
+      <directory>.web/core/themes/**/tests/src/Functional</directory>
+      <directory>.web/core/modules/**/tests/src/Functional</directory>
+      <directory>.web/core/profiles/**/tests/src/Functional</directory>
+      <directory>.web/core/themes/**/tests/src/Functional</directory>
     </testsuite>
     <testsuite name="functional-javascript">
-      <directory>tests/Drupal/FunctionalJavascriptTests</directory>
-      <directory>modules/**/tests/src/FunctionalJavascript</directory>
-      <directory>recipes/*/tests/src/FunctionalJavascript</directory>
-      <directory>profiles/**/tests/src/FunctionalJavascript</directory>
-      <directory>themes/**/tests/src/FunctionalJavascript</directory>
-      <directory>../modules/**/tests/src/FunctionalJavascript</directory>
-      <directory>../profiles/**/tests/src/FunctionalJavascript</directory>
-      <directory>../themes/**/tests/src/FunctionalJavascript</directory>
+      <directory>.web/core/tests/Drupal/FunctionalJavascriptTests</directory>
+      <directory>.web/core/modules/**/tests/src/FunctionalJavascript</directory>
+      <directory>.web/core/recipes/*/tests/src/FunctionalJavascript</directory>
+      <directory>.web/core/profiles/**/tests/src/FunctionalJavascript</directory>
+      <directory>.web/core/themes/**/tests/src/FunctionalJavascript</directory>
+      <directory>.web/core/modules/**/tests/src/FunctionalJavascript</directory>
+      <directory>.web/core/profiles/**/tests/src/FunctionalJavascript</directory>
+      <directory>.web/core/themes/**/tests/src/FunctionalJavascript</directory>
     </testsuite>
     <testsuite name="build">
-      <directory>tests/Drupal/BuildTests</directory>
+      <directory>.web/core/tests/Drupal/BuildTests</directory>
     </testsuite>
   </testsuites>
   <!-- Settings for coverage reports. -->
